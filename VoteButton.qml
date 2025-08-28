@@ -14,7 +14,7 @@ QfToolButton {
     iconColor: Theme.mainOverlayColor
     round: true
     enabled: true
-    visible: (plugin && plugin.selection && plugin.selection.focusedItem > -1 && plugin.selection.focusedLayer)
+    visible: ((plugin && plugin.selection && plugin.selection.focusedItem > -1 && plugin.selection.focusedLayer) && voteButton.plugin.selectedFeature.attribute("creationuser") != plugin.projectInfo.cloudUserInformation.username)
     width: 48
     height: 48
     clip: true
@@ -155,9 +155,6 @@ QfToolButton {
             if (!voteButton.plugin.selection.focusedFeature || voteButton.plugin.selection.focusedFeature.id < 0) return
             voteButton.plugin.selectedFeature = voteButton.plugin.selection.focusedFeature
             voteButton.hasUserVotedForFeature();
-
-            iface.logMessage("test :D")
-            iface.logMessage(voteButton.plugin.selectedFeature.attribute("creationuser"))
         }
     }
 
