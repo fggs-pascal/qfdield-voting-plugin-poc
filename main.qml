@@ -38,8 +38,6 @@ Item {
             }
         }
 
-        iface.logMessage("Vote button created");
-
         // create the button
         const comp = Qt.createComponent("VoteButton.qml")
         voteButtonRef = comp.createObject(navigationBar, { "plugin": plugin })
