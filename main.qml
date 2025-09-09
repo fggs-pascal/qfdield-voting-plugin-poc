@@ -18,8 +18,8 @@ Item {
     property var selection: featureForm.selection
     property var model: featureForm.model
 
-    property string icon: "icons/icon.svg"
-    property string icon_filled: "icons/icon_filled.svg"
+    property string icon: "icon.svg"
+    property string icon_filled: "icon_filled.svg"
 
     property var selectedFeature
     property var votesLayer
